@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/sign.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Sign-In script -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- Facebook SDK -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="white">
+        <div class="signup">
+            <div class="blk-name">
+                <h1 id="headname"><b>SIGN UP</b></h1>
+            </div>
+            <form class="container" action="/signup" method="post" onsubmit="return validateForm()">
+                <div class="inputs">
+                    <input class="email" type="text" placeholder="         email" name="email" id="email">
+                    <input class="password" type="password" placeholder="         password" name="password" id="password">
+                    <input class="confirm" type="password" placeholder="         confirm password" name="confirm" id="confirm">
+                </div>
+                <button class="signup-btn" type="submit"><b>Sign Up</b></button>
+                <div class="line">
+                    <p>------------------------------------</p>
+                    <p>OR</p>
+                    <p>------------------------------------</p>
+                </div>
+                <div class="icons">
+                    <!-- Google Sign-In Button -->
+                    <div class="google" id="googleSignIn" style="cursor: pointer;">
+                        <i class="fa-brands fa-google google-icon"></i>
+                        <p id="g-text"><u>Continue with Google.</u></p>
+                    </div>
+                    <!-- Facebook Sign-In Button -->
+                    <div class="fb" id="facebookSignIn" style="cursor: pointer;">
+                        <i class="fa-brands fa-facebook-f google-icon"></i>
+                        <p id="g-text"><u>Continue with Facebook.</u></p>
+                    </div>
+                    <!-- Apple Sign-In Button -->
+                    <div class="apple" id="appleSignIn" style="cursor: pointer;">
+                        <i class="fa-brands fa-apple google-icon"></i>
+                        <p id="g-text"><u>Continue with iOS.</u></p>
+                    </div>
+                </div>
+            </form>
+            <form class="swipe" action="/login" method="get">
+                <button class="swipe-login"><b>Login</b></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript for form validation -->
+    <script src="/javascripts/signup-validation.js"></script>
+</body>
+</html>
